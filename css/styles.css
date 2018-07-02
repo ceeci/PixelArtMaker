@@ -1,0 +1,202 @@
+/* Table of Content - Pixel Art Maker Style Sheet
+==================================================
+1.Body and Typography style
+2.The Grid Table Styles
+3.Button Styles
+4.Side bar Styles
+5.Content Styles
+6.Footer Styling
+7.Misc Style
+*/
+/* * {
+    box-sizing: border-box;
+} */
+/*Body and Typography style
+=========================*/
+body {
+    text-align: center;
+    font: 12px 'Montserrat', sans-serif !important;
+    margin: 0;
+    background-color: #f2f2f2;
+    
+}
+
+/*h1 {
+    font-family: Monoton;
+    font-size: 45px;
+    margin: 0.2em;
+}*/
+
+h2 {
+    margin: 0.5em 0 0.1em;
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #9C27B0;
+}
+
+h2:first-of-type {
+    margin-top: 0.2em;
+}
+
+h3 {
+    margin: 0.5em 0 0.1em;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+label {
+    float: left;
+}
+
+hr {
+    border-color: #f5f5f547;
+}
+
+div {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/*The Grid Table Styles
+=========================*/
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #9c27b0;
+    margin-top: 40px;
+}
+
+tr {
+    height: 10px;
+}
+
+td {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border-style: none;
+    border: 1px solid #ccc;
+}
+
+/*Button Styles
+=========================*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    /* margin: 5px;*/
+}
+
+/*Button Colors and Effects*/
+.btn-create {
+    background-color: #4caf50;
+    width: 100%;
+}
+
+.btn-clean {
+    background-color: #e91e63;
+}
+
+.btn-remove {
+    background-color: #000;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Side bar Styles
+=========================*/
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #ccc url("../pixel_bg2.jpg") no-repeat right top;
+    overflow-x: hidden;
+}
+
+/* Content Styles
+=========================*/
+.content {
+    margin-top: 40px;
+    margin-left: 22%;
+    padding-left: 20px;
+    min-height: 500px;
+}
+
+/*Footer Styling
+=========================*/
+.footer {
+    width: 80%;
+    background-color: #fff;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+/*Misc Style
+=========================*/
+#sizePicker {
+    margin: 15px;
+}
+
+#colorPicker {
+    width: 10em;
+}
+
+.artParameters {
+    margin: 140px 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two 
+columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 720px) {
+    .row, .content {   
+        flex-direction: column;
+    }
+}
