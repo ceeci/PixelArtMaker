@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pixel Art Maker!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--import Google Fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <!--Main Cascading Style Sheet-->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!--SideBar for Pixel Art Input Form-->
+        <div class="row">
+        <div class="sidenav">
+            <div class="artParameters">
+                <h3><strong>Choose Grid Size</strong> </h3>
+                <hr>
+                <!--Size Picker Form Begins-->
+                <form id="sizePicker" action="#">
+                    <label for="gridHeight:"><strong>Grid Height:</strong> </label>
+                    <input type="number" id="inputHeight" name="height" min="1" value="30" placeholder="Enter Grid Height">
+                    <label for="gridWidth"><strong>Grid Width:</strong> </label>
+                    <input type="number" id="inputWidth" name="width" min="1" value="80" placeholder="Enter Grid Width">
+                    <input class="button btn-create" type="submit" id="submitButton" value="Create Pixel Grid">
+                </form>
+                <!--Size Picker Form Ends here-->
+                <!--Auxiliary Buttons-->
+                <div class="colorPickerBox">
+                    <h3><strong> Pick A Color</strong></h3>
+                    <input type="color" id="colorPicker">
+                </div>
+                <!--Auxiliary Buttons-->
+                <div class="auxButtons">
+                    <button class="button btn-remove" id="removeGrid" style="vertical-align:middle"><span>Remove Grid </span></button>
+                    <button class="button btn-clean" id="cleanGrid" style="vertical-align:middle"><span>Clean Grid</span></button>
+                </div>
+                <!--Auxiliary Buttons End-->
+            </div>
+        </div>
+        <!--End of SideBar-->
+        <!--Main Canvas Content-->
+        <div class="content">
+            <!-- <h1>Lab: Pixel Art Maker</h1> -->
+            <h2>Design Canvas</h2>
+            <table id="pixelCanvas"></table>
+        </div>
+        <div>
+        <!--End of Content-->
+        <!--Footer starts here-->
+        <div class="footer">
+        <p>Pixel Art Maker is for those that have the patience, persistence and persevering spirit. Not forgetting the zeal to accomplish an artistic work</p>
+        </div>
+        <!--End of footer-->
+        <!--JavaScript Files-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/designs.js"></script>
+        
+    </body>
+</html>
