@@ -120,6 +120,11 @@ input[type="number"] {
     background-color: #000;
 }
 
+.previewImg{
+    margin: 10px 0 0 0;
+    background-color: #9c27b0;
+}
+
 .button span {
     cursor: pointer;
     display: inline-block;
@@ -196,7 +201,6 @@ input[type="number"] {
 
 #img-out {
     position: fixed;
-
 }
 
 canvas {
