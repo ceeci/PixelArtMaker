@@ -154,7 +154,7 @@ input[type="number"] {
     z-index: 1;
     top: 0;
     left: 0;
-    background: #ccc url("../pixel_bg2.jpg") no-repeat right top;
+    background: #ccc url("../images/pixel_bg2.jpg") no-repeat right top;
     overflow-x: hidden;
 }
 
