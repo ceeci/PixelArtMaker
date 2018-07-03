@@ -193,9 +193,19 @@ input[type="number"] {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#img-out {
+    position: fixed;
+
+}
+
+canvas {
+    margin: -50px -320px 0 0;
+    /*border-top: 1px solid #ccc;*/
+}
 /* Responsive layout - when the screen is less than 700px wide, make the two 
 columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 720px) { //currently has no effect yet... working on fix on responsiveness
     .row, .content {   
         flex-direction: column;
     }
