@@ -3,6 +3,7 @@
   1.Input Selectors (Constant Variables)
   2.Make Grid Function 
   3.Event Listeners
+  4.Preview and Download image Function
 
 Input Selectors 
 =====================*/
@@ -68,3 +69,22 @@ $("#cleanGrid").click(function(event){
 // $("table").on("click", "td", function() {
 //     $(this).css("border-color", color.val());
 // });
+
+//Preview and Download image Function
+var theCanvas; //initialize the variables to be used
+$(function() { 
+    $("#btnSave").click(function() { 
+        html2canvas($("#pixelCanvas"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+
+                // Convert and Preview/ download as image 
+                Canvas2Image.saveAsJPEG(canvas); 
+                $("#img-out").append(canvas);
+                // Clean up 
+                //document.body.removeChild(canvas);
+            }
+        });
+    });
+});
